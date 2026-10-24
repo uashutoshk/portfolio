@@ -7,3 +7,7 @@ npm-debug.log*
 # agent tooling + personal documents — not part of the site
 .agents/
 resume.pdf
+.codex/
+.zcode/
+.impeccable/
+
