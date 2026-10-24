@@ -1,0 +1,94 @@
+/* ── keyframes ────────────────────────────────────────────── */
+@keyframes blink {
+  0%, 55% { opacity: 1; }
+  56%, 100% { opacity: 0; }
+}
+
+@keyframes blink-soft {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.45; }
+}
+
+@keyframes pulse-ring {
+  0%   { box-shadow: 0 0 0 0 color-mix(in srgb, var(--green) 55%, transparent); }
+  70%  { box-shadow: 0 0 0 9px transparent; }
+  100% { box-shadow: 0 0 0 0 transparent; }
+}
+
+@keyframes dash-drift {
+  to { stroke-dashoffset: -100; }
+}
+
+@keyframes node-pulse {
+  0%, 100% { transform: scale(1); opacity: 0.55; }
+  50% { transform: scale(1.5); opacity: 0.9; }
+}
+
+@keyframes cue-bob {
+  0%, 100% { transform: translateX(-50%) translateY(0); }
+  50% { transform: translateX(-50%) translateY(6px); }
+}
+
+@keyframes count-tick {
+  0% { opacity: 0.4; }
+  100% { opacity: 1; }
+}
+
+/* ── scroll reveal system ─────────────────────────────────── */
+.reveal {
+  opacity: 0;
+  transform: translateY(22px);
+  transition: opacity 640ms var(--ease-out),
+    transform 640ms var(--ease-out);
+  transition-delay: var(--d, 0s);
+  will-change: opacity, transform;
+}
+.reveal.in {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* gentle entrance for the whole page */
+@keyframes page-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+body { animation: page-in 480ms var(--ease-out) both; }
+
+/* ── smooth theme cross-fade on toggle ────────────────────── */
+html.theme-fade,
+html.theme-fade body,
+html.theme-fade header,
+html.theme-fade section,
+html.theme-fade footer,
+html.theme-fade div,
+html.theme-fade aside,
+html.theme-fade article,
+html.theme-fade a,
+html.theme-fade button,
+html.theme-fade span,
+html.theme-fade p,
+html.theme-fade li,
+html.theme-fade time {
+  transition: background-color 320ms var(--ease-out),
+    color 320ms var(--ease-out),
+    border-color 320ms var(--ease-out) !important;
+}
+
+/* ── reduced motion: show everything, animate nothing ─────── */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+  .reveal {
+    opacity: 1;
+    transform: none;
+  }
+  .t-out { opacity: 1; }
+  .hero-terminal:hover { transform: none; }
+}

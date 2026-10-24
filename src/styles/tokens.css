@@ -1,0 +1,134 @@
+/* ─────────────────────────────────────────────────────────────
+   Catppuccin — https://catppuccin.com
+   mocha = dark (default) · latte = light
+   accent-text values are darkened in latte where the palette
+   accent fails WCAG AA as small text (a11y > palette purity).
+   ───────────────────────────────────────────────────────────── */
+
+:root {
+  /* type */
+  --font-sans: 'IBM Plex Sans', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, 'Cascadia Code', Consolas, monospace;
+
+  --step--1: clamp(0.72rem, 0.70rem + 0.15vw, 0.82rem);
+  --step-0: clamp(0.95rem, 0.92rem + 0.2vw, 1.05rem);
+  --step-1: clamp(1.15rem, 1.08rem + 0.4vw, 1.35rem);
+  --step-2: clamp(1.45rem, 1.3rem + 0.8vw, 1.9rem);
+  --step-3: clamp(1.9rem, 1.55rem + 1.8vw, 2.9rem);
+  --step-4: clamp(2.4rem, 1.7rem + 3.4vw, 4.1rem);
+
+  /* rhythm */
+  --space-1: 0.35rem;
+  --space-2: 0.7rem;
+  --space-3: 1.1rem;
+  --space-4: 1.6rem;
+  --space-5: 2.4rem;
+  --space-6: 3.6rem;
+  --space-7: 5.5rem;
+
+  --container: 72rem;
+  --gutter: clamp(1.1rem, 4vw, 2.5rem);
+  --radius: 14px;
+  --radius-sm: 9px;
+
+  /* motion */
+  --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+  --ease-spring: cubic-bezier(0.34, 1.56, 0.64, 1);
+  --t-fast: 160ms;
+  --t-med: 320ms;
+  --t-slow: 560ms;
+}
+
+/* ── mocha (dark) ─────────────────────────────────────────── */
+:root,
+[data-theme='mocha'] {
+  color-scheme: dark;
+
+  --bg: #1e1e2e;        /* base */
+  --bg-mantle: #181825;
+  --bg-crust: #11111b;
+  --surface-0: #313244;
+  --surface-1: #45475a;
+  --surface-2: #585b70;
+  --overlay-1: #7f849c;
+  --text: #cdd6f4;
+  --text-dim: #a6adc8;
+  --text-faint: #9399b2;
+  --border: #3b3d52;
+  --border-strong: #585b70;
+
+  --rosewater: #f5e0dc;
+  --flamingo: #f2cdcd;
+  --pink: #f5c2e7;
+  --mauve: #cba6f7;
+  --red: #f38ba8;
+  --maroon: #eba0ac;
+  --peach: #fab387;
+  --yellow: #f9e2af;
+  --green: #a6e3a1;
+  --teal: #94e2d5;
+  --sky: #89dceb;
+  --sapphire: #74c7ec;
+  --blue: #89b4fa;
+  --lavender: #b4befe;
+
+  /* AA-safe text accents on --bg */
+  --accent-green: var(--green);
+  --accent-mauve: var(--mauve);
+  --accent-blue: var(--blue);
+  --accent-peach: var(--peach);
+
+  /* primary button: green fill, near-black label */
+  --btn-primary-bg: #a6e3a1;
+  --btn-primary-fg: #11111b;
+  --btn-primary-bg-hover: #b9e9b4;
+
+  /* terminal surfaces stay dark in BOTH themes — real terminals are */
+  --term-bg: #11111b;
+  --term-header: #181825;
+  --term-text: #cdd6f4;
+  --term-dim: #7f849c;
+}
+
+/* ── latte (light) ────────────────────────────────────────── */
+[data-theme='latte'] {
+  color-scheme: light;
+
+  --bg: #eff1f5;        /* base */
+  --bg-mantle: #e6e9ef;
+  --bg-crust: #dce0e8;
+  --surface-0: #ccd0da;
+  --surface-1: #bcc0cc;
+  --surface-2: #acb0be;
+  --overlay-1: #8c8fa1;
+  --text: #4c4f69;
+  --text-dim: #6c6f85;
+  --text-faint: #7c7f93;
+  --border: #c5c9d6;
+  --border-strong: #acb0be;
+
+  --rosewater: #dc8a78;
+  --flamingo: #dd7878;
+  --pink: #ea76cb;
+  --mauve: #8839ef;
+  --red: #d20f39;
+  --maroon: #e64553;
+  --peach: #fe640b;
+  --yellow: #df8e1d;
+  --green: #40a02b;
+  --teal: #179299;
+  --sky: #04a5e5;
+  --sapphire: #209fb5;
+  --blue: #1e66f5;
+  --lavender: #7287fd;
+
+  /* AA-safe text accents on --bg (darkened where needed) */
+  --accent-green: #2f7d1c;
+  --accent-mauve: #7c32e8;
+  --accent-blue: #1e5ee8;
+  --accent-peach: #bc4407;
+
+  --btn-primary-bg: #40a02b;
+  --btn-primary-fg: #11111b;
+  --btn-primary-bg-hover: #379224;
+}

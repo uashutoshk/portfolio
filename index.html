@@ -1,0 +1,493 @@
+<!doctype html>
+<html lang="en" data-theme="mocha">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ashutosh Khanal Upadhyay — IT Support → Network Engineer · Kathmandu</title>
+  <meta name="description" content="Portfolio of Ashutosh Khanal Upadhyay — IT support technician at a 24/7 hospital in Kathmandu, routing his career toward network engineering. 200+ endpoints, 20+ switches, zero downtime for excuses." />
+  <meta property="og:title" content="Ashutosh Khanal Upadhyay — routing toward network engineering" />
+  <meta property="og:description" content="IT support technician at a 24/7 hospital in Kathmandu. 200+ endpoints, 20+ switches, and every cable in between." />
+  <meta property="og:type" content="website" />
+  <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#1e1e2e" />
+  <meta name="theme-color" media="(prefers-color-scheme: light)" content="#eff1f5" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
+  <script>
+    // set theme before first paint — no flash of the wrong flavor
+    (function () {
+      try {
+        var stored = localStorage.getItem('theme');
+        var theme = stored === 'latte' || stored === 'mocha'
+          ? stored
+          : (window.matchMedia('(prefers-color-scheme: light)').matches ? 'latte' : 'mocha');
+        document.documentElement.dataset.theme = theme;
+      } catch (e) { /* private mode — keep mocha default */ }
+    })();
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/src/styles/main.css" />
+
+  <noscript>
+    <style>
+      .reveal { opacity: 1 !important; transform: none !important; }
+      .t-out { opacity: 1; }
+    </style>
+  </noscript>
+</head>
+<body>
+  <a class="skip-link" href="#main">skip to content</a>
+  <div class="progress" aria-hidden="true"><span id="progress-bar"></span></div>
+
+  <header class="site-header">
+    <nav class="nav container" aria-label="Primary">
+      <a class="brand" href="#top">~/ashutosh<span class="brand-cursor" aria-hidden="true"></span></a>
+
+      <button class="nav-toggle" id="nav-toggle" aria-expanded="false" aria-controls="nav-menu">
+        <span class="sr-only">Toggle navigation</span>
+        <svg class="icon-burger" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+        <svg class="icon-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>
+      </button>
+
+      <ul class="nav-menu" id="nav-menu">
+        <li><a class="nav-link" href="#about" data-nav="about">01·whoami</a></li>
+        <li><a class="nav-link" href="#route" data-nav="route">02·route</a></li>
+        <li><a class="nav-link" href="#projects" data-nav="projects">03·projects</a></li>
+        <li><a class="nav-link" href="#skills" data-nav="skills">04·links</a></li>
+        <li><a class="nav-link" href="#contact" data-nav="contact">05·ping</a></li>
+        <li>
+          <button class="theme-toggle" id="theme-toggle" aria-label="Switch color theme" aria-pressed="false">
+            <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M4.9 4.9l1.4 1.4m11.4 11.4l1.4 1.4M2 12h2m16 0h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+            <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+          </button>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main">
+
+    <!-- ══════════════ HERO ══════════════ -->
+    <section class="hero" id="top" aria-label="Introduction">
+      <div class="hero-net" aria-hidden="true">
+        <svg viewBox="0 0 900 520" preserveAspectRatio="xMidYMid slice">
+          <g class="net-edges" stroke-width="1.5" fill="none">
+            <path d="M120 140 L 340 90" />
+            <path d="M340 90 L 620 150" />
+            <path d="M120 140 L 260 330" />
+            <path d="M260 330 L 620 150" />
+            <path d="M260 330 L 520 400" />
+            <path d="M620 150 L 780 320" />
+            <path d="M520 400 L 780 320" />
+            <path d="M340 90 L 120 140" />
+            <path d="M620 150 L 520 400" />
+          </g>
+          <g class="net-nodes">
+            <circle class="node" cx="120" cy="140" r="5" />
+            <circle class="node node-accent" cx="340" cy="90" r="6" />
+            <circle class="node" cx="620" cy="150" r="5" />
+            <circle class="node node-accent" cx="260" cy="330" r="6" />
+            <circle class="node" cx="520" cy="400" r="5" />
+            <circle class="node" cx="780" cy="320" r="5" />
+          </g>
+          <!-- packets riding the links -->
+          <g class="net-packets">
+            <circle class="packet" r="2.6"><animateMotion dur="7s" repeatCount="indefinite" path="M120 140 L 340 90 L 620 150 L 780 320 L 520 400 L 260 330 Z" begin="0s"/></circle>
+            <circle class="packet packet-blue" r="2.2"><animateMotion dur="9s" repeatCount="indefinite" path="M620 150 L 520 400 L 260 330 L 120 140 L 340 90" begin="-3s"/></circle>
+            <circle class="packet packet-mauve" r="2.2"><animateMotion dur="11s" repeatCount="indefinite" path="M340 90 L 620 150 L 520 400 L 260 330" begin="-6s"/></circle>
+          </g>
+        </svg>
+      </div>
+
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <p class="status-pill reveal">
+            <span class="pulse-dot" aria-hidden="true"></span>
+            all systems operational · Kathmandu, NP
+          </p>
+          <h1 class="reveal" style="--d:.06s">Ashutosh<br />Khanal Upadhyay</h1>
+          <p class="hero-role reveal" style="--d:.12s">
+            IT support technician by day, <span class="accent-green">network engineer in transit</span>.
+          </p>
+          <p class="hero-lede reveal" style="--d:.18s">
+            I keep a 24/7 hospital running — 200+ Windows endpoints, 20+ switches, and every
+            cable in between. Somewhere between the crimping and the subnetting, this became
+            the career I want. This site is the route so far.
+          </p>
+          <div class="hero-cta reveal" style="--d:.24s">
+            <a class="btn btn-primary" href="#projects">
+              view my work
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14m-6-6l6 6-6 6"/></svg>
+            </a>
+            <a class="btn btn-ghost" href="#contact">ping me</a>
+          </div>
+
+          <dl class="stats reveal" style="--d:.3s">
+            <div class="stat">
+              <dt>endpoints under my care</dt>
+              <dd><span class="count" data-count="200">0</span>+</dd>
+            </div>
+            <div class="stat">
+              <dt>switches kept humming</dt>
+              <dd><span class="count" data-count="20">0</span>+</dd>
+            </div>
+            <div class="stat">
+              <dt>the hospital never sleeps</dt>
+              <dd>24/7</dd>
+            </div>
+            <div class="stat">
+              <dt>support tiers, all mine</dt>
+              <dd>T1–3</dd>
+            </div>
+          </dl>
+        </div>
+
+        <div class="hero-terminal reveal" style="--d:.2s">
+          <div class="term-chrome" aria-hidden="true">
+            <span class="term-dot term-red"></span>
+            <span class="term-dot term-yellow"></span>
+            <span class="term-dot term-green"></span>
+            <span class="term-title">ashutosh@kathmandu: ~</span>
+          </div>
+          <div class="term-body" aria-label="Terminal showing a traceroute from IT support toward network engineering">
+            <p class="term-line"><span class="term-prompt">$</span> <span class="typed" data-type="traceroute network-engineer"></span><span class="term-cursor" aria-hidden="true"></span></p>
+            <div class="term-output">
+              <p class="term-line t-out">traceroute to network-engineer, 30 hops max, 60-byte packets</p>
+              <p class="term-line t-out"><span class="t-hop">1</span>&nbsp;&nbsp;be-cse.cmrit.edu.in<span class="t-dots"></span><span class="t-time">1.882 ms</span></p>
+              <p class="term-line t-out"><span class="t-hop">2</span>&nbsp;&nbsp;it-support.nmcth.edu.np<span class="t-dots"></span><span class="t-time">0.417 ms</span></p>
+              <p class="term-line t-out"><span class="t-hop">3</span>&nbsp;&nbsp;network-engineer<span class="t-dots"></span><span class="t-time t-timeout">* * *</span></p>
+              <p class="term-line t-out t-note">— hop 3 still routing. <span class="accent-green">working on it.</span></p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <a class="scroll-cue" href="#about" aria-label="Scroll to about section">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14m-6-6l6 6 6-6"/></svg>
+        scroll
+      </a>
+    </section>
+
+    <!-- ══════════════ 01 · WHOAMI ══════════════ -->
+    <section class="section" id="about" aria-labelledby="about-h">
+      <div class="container">
+        <header class="section-head reveal">
+          <span class="section-index" aria-hidden="true">01</span>
+          <h2 id="about-h"><span class="prompt" aria-hidden="true">$</span> whoami</h2>
+          <p class="section-sub">The human behind the uptime.</p>
+        </header>
+
+        <div class="about-grid">
+          <div class="about-copy reveal">
+            <p>
+              I'm the person the hospital calls at 2&nbsp;a.m. when a ward printer stops talking
+              to the network — and the one who rewires the switch box so it doesn't happen
+              again. For the last stretch I've handled Tier&nbsp;1–3 IT support at
+              <strong>Nepal Medical College &amp; Teaching Hospital</strong>: deployments,
+              cabling, subnets, CCTV, and everything Windows that blinks.
+            </p>
+            <p>
+              Before that, four years of computer science at
+              <strong>CMR Institute of Technology</strong> taught me the theory — but the part
+              of computing I love is the part you can touch. Cables, switches, ping times,
+              uptime. So I'm pointed at network engineering now, one lab at a time; the
+              Raspberry&nbsp;Pi serving media to my house is exhibit&nbsp;A.
+            </p>
+            <p class="about-target">
+              <span class="mono accent-mauve">next_hop →</span> deepening routing &amp; switching
+              fundamentals, scripting everything twice, and keeping a hospital online while I'm at it.
+            </p>
+          </div>
+
+          <aside class="conf-card reveal" style="--d:.12s" aria-label="Quick facts, formatted like a config file">
+            <div class="conf-chrome">
+              <span aria-hidden="true">—​—●</span>
+              <span class="conf-name">/etc/ashutosh.conf</span>
+            </div>
+            <pre><code><span class="c-comment"># last modified: 2026 · Kathmandu</span>
+
+<span class="c-section">[identity]</span>
+name     = Ashutosh Khanal Upadhyay
+based_in = Kathmandu, Nepal
+role     = IT Support Technician
+target   = Network Engineer
+
+<span class="c-section">[education]</span>
+degree   = BE · Computer Science
+school   = CMR Institute of Technology
+cgpa     = <span class="accent-green">7.49 / 10</span>  <span class="c-comment"># 2020 – 2024</span>
+
+<span class="c-section">[status]</span>
+uptime   = 24/7 hospital ops
+response = tier 1 through 3</code></pre>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════ 02 · ROUTE ══════════════ -->
+    <section class="section section-alt" id="route" aria-labelledby="route-h">
+      <div class="container">
+        <header class="section-head reveal">
+          <span class="section-index" aria-hidden="true">02</span>
+          <h2 id="route-h"><span class="prompt" aria-hidden="true">$</span> traceroute career</h2>
+          <p class="section-sub">Every career is a route. Here are my hops — chronological, no NAT.</p>
+        </header>
+
+        <ol class="hops">
+          <li class="hop reveal">
+            <div class="hop-marker" aria-hidden="true">
+              <span class="hop-dot"></span>
+            </div>
+            <article class="hop-card">
+              <div class="hop-meta">
+                <span class="hop-num mono">hop 1</span>
+                <time class="hop-time mono" datetime="2020-12">dec 2020 → jun 2024</time>
+              </div>
+              <h3 class="hop-title">CMR Institute of Technology</h3>
+              <p class="hop-role">Bachelor of Engineering · Computer Science</p>
+              <p class="hop-desc">
+                Four years of algorithms, systems and late-night projects — including a
+                final-year ML model that learned to tell Nepali and Indian banknotes apart at
+                <span class="accent-green">92% accuracy</span>. Graduated with a 7.49 CGPA
+                and a growing suspicion that my favourite lectures were the networking ones.
+              </p>
+              <ul class="hop-tags" aria-label="Relevant tags">
+                <li>computer science</li>
+                <li>python</li>
+                <li>golang</li>
+                <li>machine learning</li>
+              </ul>
+              <span class="hop-latency mono" aria-hidden="true">1.882 ms</span>
+            </article>
+          </li>
+
+          <li class="hop reveal">
+            <div class="hop-marker" aria-hidden="true">
+              <span class="hop-dot hop-dot-live"></span>
+            </div>
+            <article class="hop-card">
+              <div class="hop-meta">
+                <span class="hop-num mono">hop 2</span>
+                <span class="hop-here mono">● you are here</span>
+                <time class="hop-time mono" datetime="2026-04">apr 2026 → present</time>
+              </div>
+              <h3 class="hop-title">Nepal Medical College &amp; Teaching Hospital</h3>
+              <p class="hop-role">IT Support Technician · Jorpati, Kathmandu</p>
+              <ul class="hop-points">
+                <li>Tier 1–3 support for a hospital that never sleeps — <strong>200+ Windows endpoints, 20+ switches</strong> and hundreds of peripherals.</li>
+                <li>Automated fresh Windows deployments with batch &amp; shell scripts: provisioning, static IP assignment, Group Policy setup.</li>
+                <li>Built out the physical layer — LAN cabling, switch-box provisioning, IP surveillance / CCTV deployment.</li>
+                <li>Own subnets, static IP mappings and local network settings across the facility.</li>
+                <li>Diagnose hardware &amp; OS incidents with minimal disruption to clinical operations, plus preventive maintenance on an aging fleet.</li>
+              </ul>
+              <ul class="hop-tags" aria-label="Relevant tags">
+                <li>windows admin</li>
+                <li>lan cabling</li>
+                <li>switches</li>
+                <li>powershell</li>
+                <li>subnetting</li>
+                <li>cctv</li>
+              </ul>
+              <span class="hop-latency mono" aria-hidden="true">0.417 ms</span>
+            </article>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ══════════════ 03 · PROJECTS ══════════════ -->
+    <section class="section" id="projects" aria-labelledby="projects-h">
+      <div class="container">
+        <header class="section-head reveal">
+          <span class="section-index" aria-hidden="true">03</span>
+          <h2 id="projects-h"><span class="prompt" aria-hidden="true">$</span> ls ~/projects</h2>
+          <p class="section-sub">Two builds that taught me the most — one taught me packets, the other patience.</p>
+        </header>
+
+        <div class="proj-grid">
+          <article class="proj-card reveal">
+            <div class="proj-chrome" aria-hidden="true">
+              <span class="term-dot term-red"></span><span class="term-dot term-yellow"></span><span class="term-dot term-green"></span>
+              <span class="proj-file mono">pi-webserver</span>
+            </div>
+            <div class="proj-body">
+              <div class="proj-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="7" rx="1.5"/><rect x="3" y="13" width="18" height="7" rx="1.5"/><path d="M7 7.5h.01M7 16.5h.01"/><path d="M12 21v-1"/></svg>
+              </div>
+              <h3 class="proj-title">Raspberry Pi Web Server</h3>
+              <p class="proj-desc">
+                A self-hosted media server on a Pi — hosting, availability, and what it
+                actually takes to keep a small service alive around the clock. Where I got
+                comfortable with Linux, ports, and the sweet silence of a service that just
+                keeps running.
+              </p>
+              <ul class="proj-tags" aria-label="Technologies">
+                <li>linux</li><li>self-hosting</li><li>iot</li><li>uptime</li>
+              </ul>
+              <div class="proj-foot">
+                <span class="proj-meta mono">homelab · kathmandu</span>
+                <span class="proj-status mono"><span class="status-beacon" aria-hidden="true"></span> serving</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="proj-card reveal" style="--d:.1s">
+            <div class="proj-chrome" aria-hidden="true">
+              <span class="term-dot term-red"></span><span class="term-dot term-yellow"></span><span class="term-dot term-green"></span>
+              <span class="proj-file mono">currency-app.py</span>
+            </div>
+            <div class="proj-body">
+              <div class="proj-icon proj-icon-ml" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="6" width="20" height="12" rx="2"/><circle cx="12" cy="12" r="3"/><path d="M6 12h.01M18 12h.01"/></svg>
+              </div>
+              <h3 class="proj-title">Currency Recognition App</h3>
+              <p class="proj-desc">
+                A Python GUI that classifies Nepali and Indian banknotes with a model I
+                trained myself — <span class="accent-green">92% accuracy</span>, from building
+                the dataset and cleaning it, to wiring the trained model into a desktop app.
+                Data work is 80% patience; the other 20% is also patience.
+              </p>
+              <ul class="proj-tags" aria-label="Technologies">
+                <li>python</li><li>machine learning</li><li>gui</li><li>datasets</li>
+              </ul>
+              <div class="proj-foot">
+                <a class="proj-link mono" href="https://github.com/asup20cs/CurrencyRecognizationApp" target="_blank" rel="noopener noreferrer">
+                  git clone
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg>
+                </a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════ 04 · LINKS (SKILLS) ══════════════ -->
+    <section class="section section-alt" id="skills" aria-labelledby="skills-h">
+      <div class="container">
+        <header class="section-head reveal">
+          <span class="section-index" aria-hidden="true">04</span>
+          <h2 id="skills-h"><span class="prompt" aria-hidden="true">$</span> ip -br link</h2>
+          <p class="section-sub">Skills, organised the way <code>ifconfig</code> would.</p>
+        </header>
+
+        <div class="iface-grid">
+          <article class="iface-card reveal">
+            <div class="iface-top">
+              <h3 class="iface-name mono">eth0</h3>
+              <span class="iface-status mono"><span class="status-beacon" aria-hidden="true"></span> UP</span>
+            </div>
+            <p class="iface-role">networking &amp; infrastructure</p>
+            <ul class="iface-tags">
+              <li>LAN cabling</li><li>switch provisioning</li><li>subnetting</li><li>static IP mapping</li><li>IP CCTV</li>
+            </ul>
+          </article>
+
+          <article class="iface-card reveal" style="--d:.07s">
+            <div class="iface-top">
+              <h3 class="iface-name mono iface-blue">wlan0</h3>
+              <span class="iface-status mono"><span class="status-beacon" aria-hidden="true"></span> UP</span>
+            </div>
+            <p class="iface-role">systems &amp; admin</p>
+            <ul class="iface-tags">
+              <li>windows administration</li><li>group policy</li><li>linux</li><li>OS deployment</li>
+            </ul>
+          </article>
+
+          <article class="iface-card reveal" style="--d:.14s">
+            <div class="iface-top">
+              <h3 class="iface-name mono iface-mauve">tun0</h3>
+              <span class="iface-status mono"><span class="status-beacon" aria-hidden="true"></span> UP</span>
+            </div>
+            <p class="iface-role">scripting &amp; building</p>
+            <ul class="iface-tags">
+              <li>python</li><li>golang</li><li>powershell</li><li>batch / shell</li>
+            </ul>
+          </article>
+
+          <article class="iface-card reveal" style="--d:.21s">
+            <div class="iface-top">
+              <h3 class="iface-name mono iface-peach">mgmt0</h3>
+              <span class="iface-status mono"><span class="status-beacon" aria-hidden="true"></span> UP</span>
+            </div>
+            <p class="iface-role">support &amp; operations</p>
+            <ul class="iface-tags">
+              <li>tier 1–3 support</li><li>troubleshooting</li><li>preventive maintenance</li><li>24/7 ops</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════ 05 · PING ══════════════ -->
+    <section class="section" id="contact" aria-labelledby="contact-h">
+      <div class="container">
+        <header class="section-head reveal">
+          <span class="section-index" aria-hidden="true">05</span>
+          <h2 id="contact-h"><span class="prompt" aria-hidden="true">$</span> ping ashutosh</h2>
+          <p class="section-sub">One packet, zero loss. Fastest routes below.</p>
+        </header>
+
+        <div class="ping-wrap">
+          <div class="ping-term reveal" aria-label="Terminal showing a successful ping">
+            <div class="term-chrome" aria-hidden="true">
+              <span class="term-dot term-red"></span><span class="term-dot term-yellow"></span><span class="term-dot term-green"></span>
+              <span class="term-title">output</span>
+            </div>
+            <pre class="ping-out mono" tabindex="0"><code>$ ping -c 1 ashutosh
+PING ashutosh (uashutoshk.com.np): 56 data bytes
+64 bytes from ashutosh: icmp_seq=0 <span class="accent-green">ttl=64</span> time=<span class="accent-green">0.42 ms</span>
+
+--- ashutosh ping statistics ---
+1 packets transmitted, 1 received, <span class="accent-green">0% packet loss</span></code></pre>
+          </div>
+
+          <div class="contact-grid">
+            <a class="contact-card reveal" href="mailto:uashutoshk@gmail.com">
+              <span class="contact-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg></span>
+              <span class="contact-label mono">email · 0.42 ms</span>
+              <span class="contact-value">uashutoshk@gmail.com</span>
+            </a>
+            <a class="contact-card reveal" style="--d:.07s" href="https://github.com/asup20cs" target="_blank" rel="noopener noreferrer">
+              <span class="contact-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.91.58.11.79-.25.79-.55 0-.27-.01-1.17-.02-2.12-3.2.7-3.88-1.36-3.88-1.36-.52-1.33-1.28-1.68-1.28-1.68-1.04-.71.08-.7.08-.7 1.15.08 1.76 1.19 1.76 1.19 1.03 1.76 2.69 1.25 3.35.96.1-.75.4-1.25.72-1.54-2.55-.29-5.24-1.28-5.24-5.69 0-1.26.45-2.28 1.19-3.09-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.17 1.18a11 11 0 0 1 5.78 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.83 1.19 3.09 0 4.42-2.7 5.4-5.26 5.68.41.35.77 1.05.77 2.12 0 1.53-.01 2.76-.01 3.14 0 .3.2.67.8.55A11.51 11.51 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5z"/></svg></span>
+              <span class="contact-label mono">github · 12.4 ms</span>
+              <span class="contact-value">github.com/asup20cs</span>
+            </a>
+            <a class="contact-card reveal" style="--d:.14s" href="tel:+9779847445877">
+              <span class="contact-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.13.96.36 1.9.7 2.8a2 2 0 0 1-.45 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.45c.9.34 1.84.57 2.8.7a2 2 0 0 1 1.7 2.05z"/></svg></span>
+              <span class="contact-label mono">phone · 28.1 ms</span>
+              <span class="contact-value">+977 984-7445877</span>
+            </a>
+            <div class="contact-card contact-card-static reveal" style="--d:.21s">
+              <span class="contact-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 1 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg></span>
+              <span class="contact-label mono">location · 0 ms</span>
+              <span class="contact-value">Kathmandu, Nepal · UTC+5:45</span>
+            </div>
+          </div>
+
+          <div class="contact-cta reveal">
+            <a class="btn btn-primary btn-lg" href="mailto:uashutoshk@gmail.com?subject=Hello%20Ashutosh">
+              open a connection
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14m-6-6l6 6-6 6"/></svg>
+            </a>
+            <p class="contact-note mono">recruiting? deploying something? my inbox drops no packets.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <p class="footer-line mono">© <span id="year">2026</span> ashutosh khanal upadhyay</p>
+      <p class="footer-line mono footer-dim">hand-built · vanilla html/css/js · no frameworks were harmed</p>
+      <p class="footer-line mono footer-dim">27.7172° N, 85.3240° E <span class="footer-sep">·</span> ttl exceeded — thanks for visiting</p>
+    </div>
+  </footer>
+
+  <script type="module" src="/src/main.js"></script>
+</body>
+</html>
