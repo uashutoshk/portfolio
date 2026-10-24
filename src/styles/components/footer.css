@@ -1,0 +1,27 @@
+/* site footer */
+
+.site-footer {
+  border-top: 1px solid var(--border);
+  background: var(--bg-crust);
+  padding-block: var(--space-4);
+}
+.footer-grid {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+  text-align: center;
+}
+.footer-line {
+  font-size: var(--step--1);
+  color: var(--text-dim);
+}
+.footer-dim { color: var(--text-faint); }
+.footer-sep { color: var(--text-faint); margin-inline: 0.4em; }
+
+@media (min-width: 1024px) {
+  .footer-grid {
+    flex-direction: row;
+    justify-content: space-between;
+    text-align: left;
+  }
+}

@@ -1,0 +1,185 @@
+/* projects: featured terminal cards + compact github repo strip */
+
+.proj-grid {
+  display: grid;
+  gap: var(--space-4);
+}
+.proj-card {
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: transform var(--t-med) var(--ease-out),
+    border-color var(--t-med) var(--ease-out),
+    box-shadow var(--t-med) var(--ease-out);
+}
+.proj-card:hover {
+  transform: translateY(-5px);
+  border-color: var(--border-strong);
+  box-shadow: 0 26px 60px -28px rgba(0, 0, 0, 0.55);
+}
+.proj-card:hover .proj-chrome { border-bottom-color: var(--border-strong); }
+.proj-file {
+  margin-left: 0.4rem;
+  font-size: var(--step--1);
+  color: var(--text-faint);
+}
+.proj-body {
+  padding: var(--space-4);
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+.proj-icon {
+  width: 46px;
+  height: 46px;
+  display: grid;
+  place-items: center;
+  margin-bottom: var(--space-3);
+  border-radius: var(--radius-sm);
+  color: var(--accent-green);
+  background: color-mix(in srgb, var(--green) 12%, transparent);
+  border: 1px solid color-mix(in srgb, var(--green) 26%, transparent);
+  transition: transform var(--t-med) var(--ease-spring);
+}
+.proj-card:hover .proj-icon { transform: rotate(-6deg) scale(1.06); }
+.proj-icon-ml {
+  color: var(--accent-mauve);
+  background: color-mix(in srgb, var(--mauve) 12%, transparent);
+  border-color: color-mix(in srgb, var(--mauve) 28%, transparent);
+}
+.proj-title {
+  font-family: var(--font-mono);
+  font-size: var(--step-1);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  margin-bottom: var(--space-2);
+}
+.proj-desc {
+  color: var(--text-dim);
+  margin-bottom: var(--space-3);
+}
+.proj-foot {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-2);
+  margin-top: auto;
+  padding-top: var(--space-3);
+  border-top: 1px dashed var(--border);
+}
+.proj-meta { font-size: var(--step--1); color: var(--text-faint); }
+.proj-status {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45em;
+  font-size: var(--step--1);
+  color: var(--accent-green);
+}
+.proj-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45em;
+  font-size: var(--step--1);
+  color: var(--accent-blue);
+  padding: 0.35rem 0.1rem;
+  transition: gap var(--t-fast) var(--ease-out),
+    color var(--t-fast) var(--ease-out);
+}
+.proj-link:hover { gap: 0.8em; color: var(--accent-mauve); }
+
+/* compact repo strip */
+.repo-strip {
+  margin-top: var(--space-5);
+  padding-top: var(--space-4);
+  border-top: 1px dashed var(--border);
+}
+.repo-strip-label {
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+  font-size: var(--step--1);
+  color: var(--text-faint);
+  margin-bottom: var(--space-3);
+  text-transform: lowercase;
+}
+.repo-grid {
+  display: grid;
+  gap: var(--space-2);
+}
+.repo-card {
+  display: grid;
+  grid-template-columns: auto auto 1fr;
+  grid-template-areas:
+    'icon name lang'
+    'icon desc desc';
+  column-gap: var(--space-2);
+  row-gap: 2px;
+  align-items: center;
+  padding: var(--space-2) var(--space-3);
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  transition: transform var(--t-fast) var(--ease-out),
+    border-color var(--t-fast) var(--ease-out),
+    background-color var(--t-fast) var(--ease-out);
+}
+.repo-card:hover {
+  transform: translateX(4px);
+  border-color: color-mix(in srgb, var(--blue) 45%, var(--border));
+  background: color-mix(in srgb, var(--surface-0) 35%, var(--bg));
+}
+.repo-icon {
+  grid-area: icon;
+  width: 34px;
+  height: 34px;
+  display: grid;
+  place-items: center;
+  border-radius: 8px;
+  color: var(--accent-mauve);
+  background: color-mix(in srgb, var(--mauve) 10%, transparent);
+  border: 1px solid color-mix(in srgb, var(--mauve) 22%, transparent);
+  transition: transform var(--t-fast) var(--ease-spring);
+}
+.repo-card:hover .repo-icon { transform: scale(1.1); }
+.repo-name {
+  grid-area: name;
+  font-size: var(--step--1);
+  font-weight: 700;
+  color: var(--text);
+}
+.repo-lang {
+  grid-area: lang;
+  justify-self: end;
+  font-size: 0.68rem;
+  padding: 0.14rem 0.55rem;
+  border-radius: 999px;
+  color: var(--text-faint);
+  border: 1px solid var(--border);
+}
+.repo-desc {
+  grid-area: desc;
+  font-size: var(--step--1);
+  color: var(--text-faint);
+  line-height: 1.45;
+}
+.repo-all {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45em;
+  margin-top: var(--space-3);
+  font-size: var(--step--1);
+  color: var(--accent-green);
+  transition: gap var(--t-fast) var(--ease-out);
+}
+.repo-all:hover { gap: 0.8em; }
+
+@media (min-width: 700px) {
+  .proj-grid { grid-template-columns: repeat(2, 1fr); }
+  .repo-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (min-width: 1080px) {
+  .proj-grid { grid-template-columns: repeat(3, 1fr); }
+}

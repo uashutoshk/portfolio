@@ -1,5 +1,13 @@
 @import './tokens.css';
 @import './base.css';
 @import './layout.css';
-@import './components.css';
+@import './components/primitives.css';
+@import './components/header.css';
+@import './components/hero.css';
+@import './components/about.css';
+@import './components/route.css';
+@import './components/projects.css';
+@import './components/skills.css';
+@import './components/contact.css';
+@import './components/footer.css';
 @import './animations.css';

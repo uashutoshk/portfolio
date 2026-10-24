@@ -1,0 +1,88 @@
+/* contact: ping terminal + channel cards + CTA */
+
+.ping-wrap {
+  display: grid;
+  gap: var(--space-5);
+}
+.ping-term {
+  background: var(--term-bg);
+  border: 1px solid #313244;
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: 0 20px 50px -28px rgba(0, 0, 0, 0.55);
+}
+.ping-out {
+  padding: var(--space-4);
+  overflow-x: auto;
+  font-size: var(--step--1);
+  line-height: 1.8;
+  color: var(--term-text);
+}
+.ping-out .accent-green { color: #a6e3a1; }
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-3);
+}
+.contact-card {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  grid-template-rows: auto auto;
+  column-gap: var(--space-3);
+  align-items: center;
+  padding: var(--space-3) var(--space-4);
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  transition: transform var(--t-med) var(--ease-out),
+    border-color var(--t-med) var(--ease-out),
+    box-shadow var(--t-med) var(--ease-out);
+}
+a.contact-card:hover {
+  transform: translateY(-3px);
+  border-color: color-mix(in srgb, var(--green) 50%, var(--border));
+  box-shadow: 0 18px 42px -24px rgba(0, 0, 0, 0.5);
+}
+.contact-card-static { cursor: default; }
+.contact-icon {
+  grid-row: 1 / span 2;
+  width: 44px;
+  height: 44px;
+  display: grid;
+  place-items: center;
+  border-radius: var(--radius-sm);
+  color: var(--accent-blue);
+  background: color-mix(in srgb, var(--blue) 11%, transparent);
+  border: 1px solid color-mix(in srgb, var(--blue) 25%, transparent);
+  transition: transform var(--t-med) var(--ease-spring);
+}
+a.contact-card:hover .contact-icon { transform: scale(1.1) rotate(-4deg); }
+.contact-label {
+  grid-column: 2;
+  font-size: 0.72rem;
+  letter-spacing: 0.04em;
+  color: var(--text-faint);
+}
+.contact-value {
+  grid-column: 2;
+  font-family: var(--font-mono);
+  font-size: var(--step-0);
+  color: var(--text);
+  word-break: break-all;
+}
+
+.contact-cta {
+  display: grid;
+  justify-items: center;
+  gap: var(--space-3);
+  text-align: center;
+}
+.contact-note {
+  font-size: var(--step--1);
+  color: var(--text-faint);
+}
+
+@media (min-width: 640px) {
+  .contact-grid { grid-template-columns: repeat(2, 1fr); }
+}

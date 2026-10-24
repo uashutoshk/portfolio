@@ -44,13 +44,28 @@ npm run preview  # serve the production build locally
 
 ## Structure
 
+Content is **data-driven and modular** — to change what the site says, you almost
+always edit a data file, not a component:
+
 ```
-index.html              all content & sections
-src/styles/tokens.css   Catppuccin palettes + type/spacing scale
-src/styles/             base, layout, components, animations
-src/main.js             theme toggle, nav, reveals, typing, counters
-public/favicon.svg      little network-triangle mark
+index.html                    slim shell + mount points + <noscript> fallback
+src/main.js                   mounts components, wires interactions
+src/data/profile.js           ← EDIT ME: identity, socials, stats, experience,
+                               skills ("interfaces"), certifications, about copy
+src/data/projects.js          ← EDIT ME: featured projects + github repos
+src/components/               one file per section
+  icon.js                     inline SVG icon set (currentColor, theme-aware)
+  header.js hero.js about.js route.js
+  projects.js skills.js contact.js footer.js
+  section.js                  shared section-header renderer
+src/lib/interactions.js       theme, nav, reveals, counters, typing, navspy
+src/styles/                   tokens / base / layout + one CSS file per component
+src/assets/profile.webp       profile photo (compressed)
 ```
+
+Adding a project = add an object to `src/data/projects.js`. Adding a skill
+group = add an object to `interfaces` in `src/data/profile.js`. New icon =
+one line in `src/components/icon.js`.
 
 ---
 

@@ -1,0 +1,62 @@
+/* about: copy column + /etc/ashutosh.conf card */
+
+.about-grid {
+  display: grid;
+  gap: var(--space-5);
+}
+.about-copy p {
+  color: var(--text-dim);
+  margin-bottom: var(--space-3);
+  max-width: 40rem;
+}
+.about-copy strong {
+  color: var(--text);
+  font-weight: 600;
+}
+.about-target {
+  padding-left: var(--space-3);
+  border-left: 2px solid var(--accent-mauve);
+}
+
+.conf-card {
+  background: var(--term-bg);
+  border: 1px solid #313244;
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: 0 20px 50px -26px rgba(0, 0, 0, 0.55);
+  transition: transform var(--t-med) var(--ease-out),
+    box-shadow var(--t-med) var(--ease-out);
+}
+.conf-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 28px 64px -28px rgba(0, 0, 0, 0.65);
+}
+.conf-chrome {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #585b70;
+  font-family: var(--font-mono);
+  font-size: var(--step--1);
+}
+.conf-dots { color: #585b70; letter-spacing: 0.2em; }
+.conf-name { color: #7f849c; }
+.conf-edit { color: #585b70; }
+.conf-card pre {
+  padding: var(--space-3) var(--space-4);
+  overflow-x: auto;
+  font-size: var(--step--1);
+  line-height: 1.75;
+  color: var(--term-text);
+}
+.c-comment { color: #6c7086; font-style: italic; }
+.c-section { color: #89b4fa; font-weight: 700; }
+.conf-card .accent-green { color: #a6e3a1; }
+
+@media (min-width: 1024px) {
+  .about-grid {
+    grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr);
+    gap: var(--space-6);
+    align-items: start;
+  }
+}
