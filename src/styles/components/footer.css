@@ -14,14 +14,16 @@
 .footer-line {
   font-size: var(--step--1);
   color: var(--text-dim);
+  white-space: nowrap; /* wrap as whole lines, never mid-phrase */
 }
 .footer-dim { color: var(--text-faint); }
-.footer-sep { color: var(--text-faint); margin-inline: 0.4em; }
 
 @media (min-width: 1024px) {
   .footer-grid {
     flex-direction: row;
-    justify-content: space-between;
-    text-align: left;
+    flex-wrap: wrap;
+    justify-content: center;
+    column-gap: var(--space-5);
+    row-gap: var(--space-1);
   }
 }

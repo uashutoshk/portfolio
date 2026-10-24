@@ -1,5 +1,5 @@
 import { icon } from './icon.js';
-import { identity, socials, stats } from '../data/profile.js';
+import { identity, stats } from '../data/profile.js';
 import profilePic from '../assets/profile.webp';
 
 const terminalLines = [
@@ -7,22 +7,6 @@ const terminalLines = [
   { hop: '2', host: 'it-support.nmcth.edu.np', time: '0.417 ms' },
   { hop: '3', host: 'network-engineer', time: '* * *', timeout: true },
 ];
-
-function avatar() {
-  return `
-  <div class="hero-top reveal">
-    <span class="avatar">
-      <img src="${profilePic}" alt="Portrait of ${identity.name}" width="76" height="76" />
-      <span class="avatar-dot" aria-hidden="true"></span>
-    </span>
-    <div class="hero-socials">
-      ${socials.map((s) => `
-        <a class="social-btn" href="${s.url}" ${s.id !== 'email' ? 'target="_blank" rel="noopener noreferrer"' : ''} aria-label="${s.label} (${s.handle})">
-          ${icon(s.id, { size: 17 })}
-        </a>`).join('')}
-    </div>
-  </div>`;
-}
 
 function terminal() {
   return `
@@ -73,23 +57,28 @@ export function hero() {
 
   <div class="container hero-grid">
     <div class="hero-copy">
-      ${avatar()}
+      <div class="hero-id reveal">
+        <span class="avatar">
+          <img src="${profilePic}" alt="Portrait of ${identity.name}" width="122" height="122" />
+          <span class="avatar-dot" aria-hidden="true"></span>
+        </span>
+        <h1>Ashutosh<br/>Khanal Upadhyay</h1>
+      </div>
 
-      <h1 class="reveal" style="--d:.06s">Ashutosh<br/>Khanal Upadhyay</h1>
-      <p class="hero-role reveal" style="--d:.12s">
+      <p class="hero-role reveal" style="--d:.06s">
         IT support technician by day, <span class="accent-green">network engineer in transit</span>.
       </p>
-      <p class="hero-lede reveal" style="--d:.18s">
+      <p class="hero-lede reveal" style="--d:.12s">
         I keep a 24/7 hospital running — 200+ Windows endpoints, 20+ switches, and every
         cable in between. Somewhere between the crimping and the subnetting, this became
         the career I want. This site is the route so far.
       </p>
-      <div class="hero-cta reveal" style="--d:.24s">
+      <div class="hero-cta reveal" style="--d:.18s">
         <a class="btn btn-primary" href="#projects">view my work ${icon('arrow-right', { size: 17 })}</a>
         <a class="btn btn-ghost" href="#contact">ping me</a>
       </div>
 
-      <dl class="stats reveal" style="--d:.3s">
+      <dl class="stats reveal" style="--d:.24s">
         ${stats.map((s) => `
         <div class="stat">
           <dt>${icon(s.icon, { size: 14, class: 'stat-icon' })}${s.label}</dt>
