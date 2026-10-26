@@ -23,7 +23,7 @@ function terminal() {
         <p class="term-line t-out">traceroute to network-engineer, 30 hops max, 60-byte packets</p>
         ${terminalLines.map((l) => `
         <p class="term-line t-out"><span class="t-hop">${l.hop}</span>&nbsp;&nbsp;${l.host}<span class="t-dots"></span><span class="t-time${l.timeout ? ' t-timeout' : ''}">${l.time}</span></p>`).join('')}
-        <p class="term-line t-out t-note">— hop 3 still routing. <span class="t-ok">working on it.</span></p>
+        <p class="term-line t-out t-note">* hop 3 still routing. <span class="t-ok">working on it.</span></p>
       </div>
     </div>
   </div>`;
@@ -69,9 +69,9 @@ export function hero() {
         IT support technician by day, <span class="accent-green">network engineer in transit</span>.
       </p>
       <p class="hero-lede reveal" style="--d:.12s">
-        I keep a 24/7 hospital running — 200+ Windows endpoints, 20+ switches, and every
+        I keep a 24/7 hospital running: 200+ Windows endpoints, 20+ switches, and every
         cable in between. Somewhere between the crimping and the subnetting, this became
-        the career I want. This site is the route so far.
+        the career I want.
       </p>
       <div class="hero-cta reveal" style="--d:.18s">
         <a class="btn btn-primary" href="#projects">view my work ${icon('arrow-right', { size: 17 })}</a>

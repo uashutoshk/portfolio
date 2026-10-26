@@ -1,4 +1,5 @@
 import { icon } from './icon.js';
+import { logoImg } from './logo.js';
 import { sectionHead } from './section.js';
 import { featured, repos, github } from '../data/projects.js';
 
@@ -10,11 +11,11 @@ function featuredCard(p, i) {
       <span class="proj-file mono">${p.file}</span>
     </div>
     <div class="proj-body">
-      <div class="proj-icon${p.iconClass ? ' proj-icon-' + p.iconClass : ''}" aria-hidden="true">${icon(p.icon, { size: 23 })}</div>
+      <div class="proj-icon${p.iconClass ? ' proj-icon-' + p.iconClass : ''}" aria-hidden="true">${logoImg(p.logo ?? p.icon, { size: 26 }) || icon(p.icon, { size: 23 })}</div>
       <h3 class="proj-title">${p.title}</h3>
       <p class="proj-desc">${p.description}</p>
       <ul class="proj-tags" aria-label="Technologies">
-        ${p.tags.map((t) => `<li>${t}</li>`).join('')}
+        ${p.tags.map((t) => `<li>${logoImg(t, { size: 14, cls: 'chip-logo' })}${t}</li>`).join('')}
       </ul>
       <div class="proj-foot">
         ${p.link
@@ -42,7 +43,7 @@ export function projects() {
   return `
 <section class="section" id="projects" aria-labelledby="projects-h">
   <div class="container">
-    ${sectionHead('03', 'ls ~/projects', 'Three builds that taught me the most — plus what the public repos are up to.', 'folder')}
+    ${sectionHead('03', 'ls ~/projects', 'Three builds that taught me the most, plus what the public repos are up to.', 'folder')}
     <div class="proj-grid">
       ${featured.map(featuredCard).join('')}
     </div>

@@ -32,10 +32,10 @@ export const stats = [
 
 export const about = {
   paragraphs: [
-    `I'm the person the hospital calls at 2 a.m. when a ward printer stops talking to the network — and the one who rewires the switch box so it doesn't happen again. For the last stretch I've handled Tier 1–3 IT support at Nepal Medical College & Teaching Hospital: deployments, cabling, subnets, CCTV, and everything Windows that blinks.`,
-    `Before that, four years of computer science at CMR Institute of Technology taught me the theory — but the part of computing I love is the part you can touch. Cables, switches, ping times, uptime. So I'm pointed at network engineering now, one lab at a time; the Raspberry Pi serving media to my house is exhibit A.`,
+    `I'm the person the hospital calls at 2 a.m. when a ward printer stops talking to the network, and the one who rewires the switch box so it doesn't happen again. Since April I've handled Tier 1–3 IT support at Nepal Medical College & Teaching Hospital: deployments, cabling, subnets, CCTV, and everything Windows that blinks.`,
+    `Before that, four years of computer science at CMR Institute of Technology taught me the theory, but the part of computing I love is the part you can touch. Cables, switches, ping times, uptime. So I'm pointed at network engineering now, one lab at a time. The Raspberry Pi serving media to my house is exhibit A.`,
   ],
-  nextHop: 'deepening routing & switching fundamentals, scripting everything twice, and keeping a hospital online while I\'m at it.',
+  nextHop: 'learning routing and switching properly, scripting everything twice, and keeping a hospital online while I\'m at it.',
 };
 
 export const experience = [
@@ -48,7 +48,7 @@ export const experience = [
     start: '2020-12',
     latency: '1.882 ms',
     current: false,
-    description: `Four years of algorithms, systems and late-night projects — including a final-year ML model that learned to tell Nepali and Indian banknotes apart at 92% accuracy. Graduated with a 7.49 CGPA and a growing suspicion that my favourite lectures were the networking ones.`,
+    description: `Four years of algorithms, systems and late-night projects, including a final-year model that learned to tell Nepali and Indian banknotes apart at 92% accuracy. Graduated with a 7.49 CGPA and a growing suspicion that my favourite lectures were the networking ones.`,
     tags: ['computer science', 'python', 'golang', 'machine learning'],
   },
   {
@@ -61,11 +61,11 @@ export const experience = [
     latency: '0.417 ms',
     current: true,
     points: [
-      'Tier 1–3 support for a hospital that never sleeps — <strong>200+ Windows endpoints, 20+ switches</strong> and hundreds of peripherals.',
+      'Tier 1–3 support for a hospital that never sleeps: <strong>200+ Windows endpoints, 20+ switches</strong>, hundreds of peripherals.',
       'Automated fresh Windows deployments with batch &amp; shell scripts: provisioning, static IP assignment, Group Policy setup.',
-      'Built out the physical layer — LAN cabling, switch-box provisioning, IP surveillance / CCTV deployment.',
+      'Built out the physical layer: LAN cabling, switch-box provisioning, IP surveillance / CCTV.',
       'Own subnets, static IP mappings and local network settings across the facility.',
-      'Diagnose hardware &amp; OS incidents with minimal disruption to clinical operations, plus preventive maintenance on an aging fleet.',
+      'Resolve hardware &amp; OS incidents without disturbing the wards, and keep an aging fleet going with preventive maintenance.',
     ],
     tags: ['windows admin', 'lan cabling', 'switches', 'powershell', 'subnetting', 'cctv'],
   },

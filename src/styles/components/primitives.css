@@ -97,6 +97,9 @@
 .hop-tags li,
 .proj-tags li,
 .iface-tags li {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.42em;
   font-family: var(--font-mono);
   font-size: 0.72rem;
   padding: 0.22rem 0.68rem;
@@ -106,6 +109,12 @@
   border: 1px solid var(--border);
   transition: color var(--t-fast) var(--ease-out),
     border-color var(--t-fast) var(--ease-out);
+}
+.chip-logo {
+  width: 14px;
+  height: 14px;
+  object-fit: contain;
+  flex-shrink: 0;
 }
 .hop-card:hover .hop-tags li,
 .proj-card:hover .proj-tags li,

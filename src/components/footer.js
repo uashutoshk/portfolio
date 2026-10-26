@@ -7,7 +7,7 @@ export function footer() {
     <p class="footer-line mono">© <span id="year">2026</span> ${identity.name.toLowerCase()}</p>
     <p class="footer-line mono footer-dim">${identity.coords}</p>
     <p class="footer-line mono footer-dim">hand-built · vanilla html/css/js</p>
-    <p class="footer-line mono footer-dim">ttl exceeded — thanks for visiting</p>
+    <p class="footer-line mono footer-dim">ttl exceeded · thanks for visiting</p>
   </div>
 </footer>`;
 }

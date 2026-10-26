@@ -1,4 +1,5 @@
 import { icon } from './icon.js';
+import { logoImg } from './logo.js';
 import { sectionHead } from './section.js';
 import { experience } from '../data/profile.js';
 
@@ -24,7 +25,7 @@ function hop(h) {
       ${h.description ? `<p class="hop-desc">${h.description}</p>` : ''}
       ${h.points ? `<ul class="hop-points">${h.points.map((p) => `<li>${p}</li>`).join('')}</ul>` : ''}
       <ul class="hop-tags" aria-label="Relevant tags">
-        ${h.tags.map((t) => `<li>${t}</li>`).join('')}
+        ${h.tags.map((t) => `<li>${logoImg(t, { size: 14, cls: 'chip-logo' })}${t}</li>`).join('')}
       </ul>
       <span class="hop-latency mono" aria-hidden="true">${h.latency}</span>
     </article>
@@ -35,7 +36,7 @@ export function route() {
   return `
 <section class="section section-alt" id="route" aria-labelledby="route-h">
   <div class="container">
-    ${sectionHead('02', 'traceroute career', 'Every career is a route. Here are my hops — chronological, no NAT.', 'route')}
+    ${sectionHead('02', 'traceroute career', 'Every career is a route. Here are my hops so far, no NAT.', 'route')}
     <ol class="hops">
       ${experience.map(hop).join('')}
     </ol>

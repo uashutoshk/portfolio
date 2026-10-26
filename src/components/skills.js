@@ -1,4 +1,5 @@
 import { icon } from './icon.js';
+import { logoImg } from './logo.js';
 import { sectionHead } from './section.js';
 import { interfaces, certifications } from '../data/profile.js';
 
@@ -11,7 +12,7 @@ function ifaceCard(card, i) {
     </div>
     <p class="iface-role">${icon(card.icon, { size: 13, class: 'iface-role-icon' })} ${card.role}</p>
     <ul class="iface-tags">
-      ${card.skills.map((s) => `<li>${s}</li>`).join('')}
+      ${card.skills.map((s) => `<li>${logoImg(s, { size: 14, cls: 'chip-logo' })}${s}</li>`).join('')}
     </ul>
   </article>`;
 }
