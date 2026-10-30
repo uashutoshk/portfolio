@@ -61,8 +61,11 @@
 .hop-card:hover {
   transform: translateX(4px);
   border-color: var(--border-strong);
-  box-shadow: -4px 4px 0 0 color-mix(in srgb, var(--mauve) 22%, transparent),
-    0 18px 44px -22px rgba(0, 0, 0, 0.5);
+  box-shadow: var(--shadow-card-hover);
+}
+.hop-card:active {
+  transform: translateX(2px) scale(0.99);
+  border-color: var(--accent-blue);
 }
 .hop-meta {
   display: flex;

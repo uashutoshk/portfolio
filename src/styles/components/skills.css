@@ -16,7 +16,11 @@
 .iface-card:hover {
   transform: translateY(-4px);
   border-color: color-mix(in srgb, var(--green) 45%, var(--border));
-  box-shadow: 0 20px 48px -26px rgba(0, 0, 0, 0.5);
+  box-shadow: var(--shadow-elev-3);
+}
+.iface-card:active {
+  transform: translateY(-2px) scale(0.99);
+  border-color: var(--accent-green);
 }
 .iface-top {
   display: flex;
@@ -34,7 +38,7 @@
 .iface-mauve { color: var(--accent-mauve); }
 .iface-peach { color: var(--accent-peach); }
 .iface-yellow { color: var(--yellow); }
-[data-theme='latte'] .iface-yellow { color: #96660d; }
+[data-theme='latte'] .iface-yellow { color: var(--accent-yellow); }
 .iface-status {
   display: inline-flex;
   align-items: center;
@@ -95,6 +99,10 @@
   transform: translateX(4px);
   border-color: var(--accent-peach);
   box-shadow: 0 4px 16px -4px color-mix(in srgb, var(--peach) 35%, transparent);
+}
+.cert-item:active {
+  transform: translateX(2px) scale(0.99);
+  border-color: var(--peach);
 }
 .cert-icon {
   grid-area: icon;

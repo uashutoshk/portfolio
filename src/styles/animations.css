@@ -35,7 +35,8 @@
 }
 
 /* ── scroll reveal system ─────────────────────────────────── */
-.reveal {
+/* visible by default; hidden only when JS enables reveals via .js class on html */
+.js .reveal {
   opacity: 0;
   transform: translateY(22px);
   transition: opacity 640ms var(--ease-out),
@@ -43,7 +44,11 @@
   transition-delay: var(--d, 0s);
   will-change: opacity, transform;
 }
-.reveal.in {
+.reveal {
+  opacity: 1;
+  transform: translateY(0);
+}
+.js .reveal.in {
   opacity: 1;
   transform: translateY(0);
 }

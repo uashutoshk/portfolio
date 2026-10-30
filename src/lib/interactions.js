@@ -195,7 +195,12 @@ function initYear() {
   if (el) el.textContent = String(new Date().getFullYear());
 }
 
+function enableReveals() {
+  document.documentElement.classList.add('js');
+}
+
 export function initInteractions() {
+  enableReveals();
   initTheme();
   initNav();
   initProgress();

@@ -127,3 +127,13 @@ section {
 
 .accent-green { color: var(--accent-green); }
 .accent-mauve { color: var(--accent-mauve); }
+
+.noscript-fallback {
+  font-family: var(--font-mono);
+  max-width: 34rem;
+  margin: 6rem auto;
+  padding: 0 1.5rem;
+  color: var(--text);
+  background: var(--bg);
+  min-height: 100vh;
+}

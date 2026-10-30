@@ -25,6 +25,11 @@
 }
 .btn:active { transform: scale(0.96); }
 
+/* links */
+a:active {
+  transform: scale(0.98);
+}
+
 .btn-primary {
   background: var(--btn-primary-bg);
   color: var(--btn-primary-fg);
@@ -57,7 +62,7 @@
 .proj-chrome {
   display: flex;
   align-items: center;
-  gap: 7px;
+  gap: 8px;
   padding: 0.6rem 0.9rem;
 }
 .term-chrome,

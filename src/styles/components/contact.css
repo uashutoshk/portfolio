@@ -6,10 +6,10 @@
 }
 .ping-term {
   background: var(--term-bg);
-  border: 1px solid #313244;
+  border: 1px solid var(--border-term);
   border-radius: var(--radius);
   overflow: hidden;
-  box-shadow: 0 20px 50px -28px rgba(0, 0, 0, 0.55);
+  box-shadow: var(--shadow-elev-3);
 }
 .ping-out {
   padding: var(--space-4);
@@ -42,7 +42,11 @@
 a.contact-card:hover {
   transform: translateY(-3px);
   border-color: color-mix(in srgb, var(--green) 50%, var(--border));
-  box-shadow: 0 18px 42px -24px rgba(0, 0, 0, 0.5);
+  box-shadow: var(--shadow-elev-2);
+}
+a.contact-card:active {
+  transform: translateY(-1px) scale(0.99);
+  border-color: var(--accent-green);
 }
 .contact-card-static { cursor: default; }
 .contact-icon {
@@ -61,7 +65,6 @@ a.contact-card:hover .contact-icon { transform: scale(1.1) rotate(-4deg); }
 .contact-label {
   grid-column: 2;
   font-size: 0.72rem;
-  letter-spacing: 0.04em;
   color: var(--text-faint);
 }
 .contact-value {

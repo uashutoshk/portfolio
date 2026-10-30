@@ -76,9 +76,8 @@
   width: 88px;
   height: 88px;
   border-radius: 50%;
-  padding: 3px;
-  background: conic-gradient(from 210deg,
-    var(--accent-green), var(--accent-mauve), var(--accent-blue), var(--accent-green));
+  padding: 4px;
+  background: var(--accent-mauve);
   transition: transform var(--t-med) var(--ease-spring),
     box-shadow var(--t-med) var(--ease-out);
   box-shadow: 0 0 0 0 color-mix(in srgb, var(--accent-mauve) 40%, transparent);
@@ -186,10 +185,9 @@
 /* terminal card */
 .hero-terminal {
   background: var(--term-bg);
-  border: 1px solid #313244;
+  border: 1px solid var(--border-term);
   border-radius: var(--radius);
-  box-shadow: 0 24px 60px -28px rgba(0, 0, 0, 0.65),
-    0 0 0 1px rgba(255, 255, 255, 0.02) inset;
+  box-shadow: var(--shadow-elev-4), var(--shadow-inner-1);
   overflow: hidden;
   transform: perspective(1200px) rotateY(0deg);
   transition: transform var(--t-slow) var(--ease-out),
@@ -197,7 +195,7 @@
 }
 .hero-terminal:hover {
   transform: perspective(1200px) rotateY(-2.4deg) rotateX(0.8deg) translateY(-4px);
-  box-shadow: 0 34px 80px -30px rgba(0, 0, 0, 0.75);
+  box-shadow: var(--shadow-elev-7);
 }
 .term-body {
   padding: var(--space-3) var(--space-3) var(--space-4);

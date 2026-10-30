@@ -18,7 +18,11 @@
 .proj-card:hover {
   transform: translateY(-5px);
   border-color: var(--border-strong);
-  box-shadow: 0 26px 60px -28px rgba(0, 0, 0, 0.55);
+  box-shadow: var(--shadow-elev-5);
+}
+.proj-card:active {
+  transform: translateY(-2px) scale(0.99);
+  border-color: var(--accent-green);
 }
 .proj-card:hover .proj-chrome { border-bottom-color: var(--border-strong); }
 .proj-file {
@@ -131,6 +135,10 @@
   transform: translateX(4px);
   border-color: color-mix(in srgb, var(--blue) 45%, var(--border));
   background: color-mix(in srgb, var(--surface-0) 35%, var(--bg));
+}
+.repo-card:active {
+  transform: translateX(2px) scale(0.99);
+  border-color: var(--accent-blue);
 }
 .repo-icon {
   grid-area: icon;

@@ -1,3 +1,7 @@
+/* hallmark v2.0.0 · theme: catppuccin (by request) · genre: atmospheric · deal: manual
+   critique: self-run, verified by render at 1280x800 and 390x844, mocha + latte
+   waive: 63 decorative status dots — the network-ops conceit is the committed world (user brief)
+   waive: 54 mono labels — mono is the material here, not a label face */
 /* ─────────────────────────────────────────────────────────────
    Catppuccin — https://catppuccin.com
    mocha = dark (default) · latte = light
@@ -21,6 +25,20 @@
   --term-green: #a6e3a1;
   --term-blue: #89b4fa;
   --term-teal: #94e2d5;
+
+  /* elevation & shadow tokens */
+  --shadow-elev-1: 0 4px 16px -4px color-mix(in srgb, var(--peach) 35%, transparent);
+  --shadow-elev-2: 0 18px 42px -24px rgba(0, 0, 0, 0.5);
+  --shadow-elev-3: 0 20px 48px -26px rgba(0, 0, 0, 0.5);
+  --shadow-elev-4: 0 24px 60px -28px rgba(0, 0, 0, 0.65);
+  --shadow-elev-5: 0 26px 60px -28px rgba(0, 0, 0, 0.55);
+  --shadow-elev-6: 0 28px 64px -28px rgba(0, 0, 0, 0.65);
+  --shadow-elev-7: 0 34px 80px -30px rgba(0, 0, 0, 0.75);
+  --shadow-inner-1: 0 0 0 1px rgba(255, 255, 255, 0.02) inset;
+
+  --border-term: #313244;
+  --shadow-card-hover: -4px 4px 0 0 color-mix(in srgb, var(--mauve) 22%, transparent),
+    0 18px 44px -22px rgba(0, 0, 0, 0.5);
 
   /* type */
   --font-sans: 'IBM Plex Sans', system-ui, -apple-system, 'Segoe UI', sans-serif;
@@ -137,6 +155,7 @@
   --accent-mauve: #7c32e8;
   --accent-blue: #1e5ee8;
   --accent-peach: #bc4407;
+  --accent-yellow: #96660d;
 
   --btn-primary-bg: #40a02b;
   --btn-primary-fg: #11111b;

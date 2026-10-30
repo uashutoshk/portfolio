@@ -20,16 +20,16 @@
 
 .conf-card {
   background: var(--term-bg);
-  border: 1px solid #313244;
+  border: 1px solid var(--border-term);
   border-radius: var(--radius);
   overflow: hidden;
-  box-shadow: 0 20px 50px -26px rgba(0, 0, 0, 0.55);
+  box-shadow: var(--shadow-elev-3);
   transition: transform var(--t-med) var(--ease-out),
     box-shadow var(--t-med) var(--ease-out);
 }
 .conf-card:hover {
   transform: translateY(-4px);
-  box-shadow: 0 28px 64px -28px rgba(0, 0, 0, 0.65);
+  box-shadow: var(--shadow-elev-6);
 }
 .conf-chrome {
   display: flex;
