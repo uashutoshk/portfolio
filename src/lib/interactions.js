@@ -56,7 +56,8 @@ function initProgress() {
     header?.classList.toggle('is-scrolled', y > 8);
     if (bar) {
       const max = document.documentElement.scrollHeight - window.innerHeight;
-      bar.style.width = `${max > 0 ? Math.min(100, (y / max) * 100) : 0}%`;
+      const pct = max > 0 ? Math.min(1, y / max) : 0;
+      bar.style.transform = `scaleX(${pct})`; // transform, never width
     }
     ticking = false;
   };

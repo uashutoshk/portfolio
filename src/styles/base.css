@@ -10,6 +10,7 @@
 html {
   scroll-behavior: smooth;
   -webkit-text-size-adjust: 100%;
+  overflow-x: clip;
 }
 
 body {
@@ -22,7 +23,7 @@ body {
   text-rendering: optimizeLegibility;
   transition: background-color var(--t-med) var(--ease-out),
     color var(--t-med) var(--ease-out);
-  overflow-x: hidden;
+  overflow-x: clip;
 }
 
 img,

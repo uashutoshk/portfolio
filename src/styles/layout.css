@@ -11,9 +11,11 @@
 .progress span {
   display: block;
   height: 100%;
-  width: 0%;
+  width: 100%;
   background: linear-gradient(90deg, var(--green), var(--mauve), var(--blue));
   opacity: 0.85;
+  transform: scaleX(0);
+  transform-origin: left center;
 }
 
 .container {

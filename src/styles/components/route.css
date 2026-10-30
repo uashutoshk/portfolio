@@ -130,6 +130,8 @@
   color: var(--accent-green);
 }
 .hop-points strong { color: var(--text); font-weight: 600; }
+/* keep the last tag row clear of the corner latency label */
+.hop-tags { margin-bottom: 1.4rem; }
 .hop-latency {
   position: absolute;
   right: var(--space-3);

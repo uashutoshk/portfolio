@@ -63,7 +63,7 @@
 .term-chrome,
 .conf-chrome {
   background: var(--term-header);
-  border-bottom: 1px solid #313244;
+  border-bottom: 1px solid var(--term-border);
 }
 .proj-chrome {
   background: var(--bg-mantle);
@@ -75,15 +75,15 @@
   border-radius: 50%;
   flex-shrink: 0;
 }
-.term-red { background: #f38ba8; }
-.term-yellow { background: #f9e2af; }
-.term-green { background: #a6e3a1; }
+.term-red { background: var(--term-red); }
+.term-yellow { background: var(--term-yellow); }
+.term-green { background: var(--term-green); }
 
 .term-title {
   margin-left: 0.4rem;
   font-family: var(--font-mono);
   font-size: var(--step--1);
-  color: #7f849c;
+  color: var(--term-dim);
 }
 
 /* ── tag chips ────────────────────────────────────────────── */

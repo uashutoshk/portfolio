@@ -35,13 +35,13 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  color: #585b70;
+  color: var(--term-dim);
   font-family: var(--font-mono);
   font-size: var(--step--1);
 }
-.conf-dots { color: #585b70; letter-spacing: 0.2em; }
-.conf-name { color: #7f849c; }
-.conf-edit { color: #585b70; }
+.conf-dots { color: var(--term-dim); letter-spacing: 0.2em; }
+.conf-name { color: var(--term-comment); }
+.conf-edit { color: var(--term-dim); }
 .conf-card pre {
   padding: var(--space-3) var(--space-4);
   overflow-x: auto;
@@ -49,9 +49,9 @@
   line-height: 1.75;
   color: var(--term-text);
 }
-.c-comment { color: #6c7086; font-style: italic; }
-.c-section { color: #89b4fa; font-weight: 700; }
-.conf-card .accent-green { color: #a6e3a1; }
+.c-comment { color: var(--term-comment); font-style: italic; }
+.c-section { color: var(--term-blue); font-weight: 700; }
+.conf-card .accent-green { color: var(--term-green); }
 
 @media (min-width: 1024px) {
   .about-grid {

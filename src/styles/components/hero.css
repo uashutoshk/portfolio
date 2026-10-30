@@ -78,10 +78,10 @@
   border-radius: 50%;
   padding: 3px;
   background: conic-gradient(from 210deg,
-    var(--green), var(--mauve), var(--blue), var(--green));
+    var(--accent-green), var(--accent-mauve), var(--accent-blue), var(--accent-green));
   transition: transform var(--t-med) var(--ease-spring),
     box-shadow var(--t-med) var(--ease-out);
-  box-shadow: 0 0 0 0 color-mix(in srgb, var(--mauve) 40%, transparent);
+  box-shadow: 0 0 0 0 color-mix(in srgb, var(--accent-mauve) 40%, transparent);
 }
 .avatar:hover {
   transform: scale(1.04) rotate(-2deg);
@@ -207,19 +207,19 @@
   color: var(--term-text);
   min-height: 14.5rem;
 }
-.term-prompt { color: #a6e3a1; font-weight: 700; }
+.term-prompt { color: var(--term-green); font-weight: 700; }
 .term-cursor {
   display: inline-block;
   width: 0.55em;
   height: 1.05em;
   margin-left: 1px;
   vertical-align: -0.15em;
-  background: #a6e3a1;
+  background: var(--term-green);
   animation: blink 1.1s steps(1) infinite;
 }
-.t-out { color: #bac2de; opacity: 0; }
+.t-out { color: var(--term-output); opacity: 0; }
 .t-out.show { opacity: 1; transition: opacity 220ms var(--ease-out); }
-.t-hop { display: inline-block; min-width: 1.4em; color: #89b4fa; }
+.t-hop { display: inline-block; min-width: 1.4em; color: var(--term-blue); }
 .t-dots {
   display: inline-block;
   width: 4.2em;
@@ -230,12 +230,12 @@
 .t-dots::after {
   content: '················';
   letter-spacing: 0.1em;
-  color: #45475a;
+  color: var(--term-dots);
 }
-.t-time { color: #94e2d5; }
-.t-timeout { color: #f9e2af; }
-.t-note { color: #7f849c; }
-.t-note .t-ok, .t-ok { color: #a6e3a1; }
+.t-time { color: var(--term-teal); }
+.t-timeout { color: var(--term-yellow); }
+.t-note { color: var(--term-dim); }
+.t-note .t-ok, .t-ok { color: var(--term-green); }
 
 @media (min-width: 640px) {
   .stats { grid-template-columns: repeat(4, 1fr); max-width: none; }

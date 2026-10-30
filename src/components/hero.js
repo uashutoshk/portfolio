@@ -33,7 +33,7 @@ export function hero() {
   return `
 <section class="hero" id="top" aria-label="Introduction">
   <div class="hero-net" aria-hidden="true">
-    <svg viewBox="0 0 900 520" preserveAspectRatio="xMidYMid slice">
+    <svg viewBox="0 0 900 520" preserveAspectRatio="xMidYMid meet">
       <g class="net-edges" stroke-width="1.5" fill="none">
         <path d="M120 140 L 340 90"/><path d="M340 90 L 620 150"/><path d="M120 140 L 260 330"/>
         <path d="M260 330 L 620 150"/><path d="M260 330 L 520 400"/><path d="M620 150 L 780 320"/>
