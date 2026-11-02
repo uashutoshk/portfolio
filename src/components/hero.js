@@ -59,7 +59,7 @@ export function hero() {
     <div class="hero-copy">
       <div class="hero-id reveal">
         <span class="avatar">
-          <img src="${profilePic}" alt="Portrait of ${identity.name}" width="122" height="122" />
+          <img src="${profilePic}" alt="Portrait of ${identity.name}" width="122" height="122" loading="eager" fetchpriority="high" decoding="async" />
           <span class="avatar-dot" aria-hidden="true"></span>
         </span>
         <h1>Ashutosh<br/>Khanal Upadhyay</h1>
