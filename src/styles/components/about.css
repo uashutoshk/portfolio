@@ -20,6 +20,7 @@
 
 .conf-card {
   background: var(--term-bg);
+  color: var(--term-text);
   border: 1px solid var(--border-term);
   border-radius: var(--radius);
   overflow: hidden;
@@ -29,7 +30,6 @@
 }
 .conf-card:hover {
   transform: translateY(-4px);
-  box-shadow: var(--shadow-elev-6);
 }
 .conf-chrome {
   display: flex;

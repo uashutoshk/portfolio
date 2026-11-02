@@ -61,7 +61,6 @@
 .hop-card:hover {
   transform: translateX(4px);
   border-color: var(--border-strong);
-  box-shadow: var(--shadow-card-hover);
 }
 .hop-card:active {
   transform: translateX(2px) scale(0.99);
@@ -74,7 +73,7 @@
   gap: var(--space-2) var(--space-3);
   margin-bottom: var(--space-3);
 }
-.hop-num { font-size: var(--step--1); color: var(--accent-blue); }
+.hop-num { font-size: var(--step--1); color: var(--accent-blue); font-variant-numeric: tabular-nums; }
 .hop-here {
   font-size: var(--step--1);
   color: var(--accent-green);
@@ -103,7 +102,9 @@
   border: 1px solid color-mix(in srgb, var(--blue) 25%, transparent);
   transition: transform var(--t-med) var(--ease-spring);
 }
-.hop-card:hover .hop-icon { transform: rotate(-5deg) scale(1.05); }
+.hop-card:hover .hop-icon {
+  transform: rotate(-5deg);
+}
 .hop-title {
   font-family: var(--font-mono);
   font-size: var(--step-1);

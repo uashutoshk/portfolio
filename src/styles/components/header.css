@@ -99,7 +99,6 @@ body.nav-open .nav-menu {
 }
 .nav-link:hover {
   color: var(--text);
-  background: var(--surface-0);
 }
 .nav-link:active {
   transform: scale(0.98);
@@ -132,8 +131,6 @@ body.nav-open .nav-menu {
 }
 .theme-toggle:hover {
   color: var(--yellow);
-  border-color: var(--border-strong);
-  transform: rotate(12deg);
 }
 .theme-toggle:active {
   transform: rotate(12deg) scale(0.92);

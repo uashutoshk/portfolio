@@ -84,7 +84,6 @@
 }
 .avatar:hover {
   transform: scale(1.04) rotate(-2deg);
-  box-shadow: 0 10px 34px -8px color-mix(in srgb, var(--mauve) 55%, transparent);
 }
 .avatar img {
   width: 100%;
@@ -115,6 +114,7 @@
   line-height: 1.04;
   letter-spacing: -0.035em;
   margin-bottom: 0;
+  text-wrap: balance;
 }
 .hero-role {
   font-size: var(--step-1);
@@ -153,6 +153,7 @@
   letter-spacing: -0.02em;
   color: var(--text);
   line-height: 1.15;
+  font-variant-numeric: tabular-nums;
 }
 .stat dt {
   display: flex;
@@ -161,6 +162,7 @@
   font-family: var(--font-mono);
   font-size: var(--step--1);
   color: var(--text-faint);
+  font-variant-numeric: tabular-nums;
 }
 .stat-icon { opacity: 0.7; }
 
@@ -180,12 +182,16 @@
   transition: color var(--t-fast) var(--ease-out);
   animation: cue-bob 2.4s var(--ease-out) infinite;
 }
-.scroll-cue:hover { color: var(--accent-green); }
+.scroll-cue:hover,
+.scroll-cue:focus {
+  animation-play-state: paused;
+  color: var(--accent-green);
+}
 
 /* terminal card */
 .hero-terminal {
   background: var(--term-bg);
-  border: 1px solid var(--border-term);
+  color: var(--term-text);
   border-radius: var(--radius);
   box-shadow: var(--shadow-elev-4), var(--shadow-inner-1);
   overflow: hidden;
@@ -195,7 +201,6 @@
 }
 .hero-terminal:hover {
   transform: perspective(1200px) rotateY(-2.4deg) rotateX(0.8deg) translateY(-4px);
-  box-shadow: var(--shadow-elev-7);
 }
 .term-body {
   padding: var(--space-3) var(--space-3) var(--space-4);
