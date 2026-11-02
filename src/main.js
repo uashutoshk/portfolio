@@ -3,6 +3,7 @@
  * Content lives in src/data/*.js — edit there, not in the components.
  */
 
+import './styles/main.css';
 import { mountHeader } from './components/header.js';
 import { mountHero } from './components/hero.js';
 import { mountAbout } from './components/about.js';

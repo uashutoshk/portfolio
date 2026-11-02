@@ -42,5 +42,5 @@ export function logoFor(name) {
 export function logoImg(name, { size = 16, cls = '' } = {}) {
   const src = logoFor(name) ?? FILES[name];
   if (!src) return '';
-  return `<img class="logo ${cls}" src="${src}" alt="" width="${size}" height="${size}" loading="lazy" decoding="async" />`;
+  return `<img class="logo ${cls}" src="${src}" alt="${name}" width="${size}" height="${size}" loading="lazy" decoding="async" />`;
 }
